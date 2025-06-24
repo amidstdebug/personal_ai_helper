@@ -8,6 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
 COPY stt_dev ./stt_dev
+COPY stt_dev/run_server.sh /run_server.sh
+RUN chmod +x /run_server.sh
 
 ENV PYTHONPATH=/app
 
