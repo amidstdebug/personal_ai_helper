@@ -1,0 +1,24 @@
+# Core dependencies
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-dotenv>=1.0.0
+pydantic>=2.4.2
+
+# Database and storage
+neo4j>=5.14.0  # For knowledge graph
+qdrant-client>=1.6.0  # For vector database
+sqlalchemy>=2.0.23  # For structured data
+
+# API integrations
+todoist-api-python>=2.1.3
+notion-client>=2.0.0
+
+# AI and ML
+openai>=1.3.0
+langchain>=0.0.335
+sentence-transformers>=2.2.2
+
+# Utilities
+python-jose>=3.3.0  # For JWT tokens
+passlib>=1.7.4  # For password hashing
+python-multipart>=0.0.6  # For form data 
