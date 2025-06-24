@@ -6,3 +6,5 @@ pytest
 requests
 uvicorn
 fastapi
+python-multipart
+pytest-asyncio
