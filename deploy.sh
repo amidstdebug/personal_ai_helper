@@ -40,4 +40,5 @@ docker compose -f stt_dev/docker-compose.yml up --build -d
 sleep 5
 curl -fs http://localhost:8000/health >/dev/null && echo "Backend healthy" || echo "Backend failed"
 curl -fs http://localhost:8001/health >/dev/null && echo "STT healthy" || echo "STT failed"
-docker compose ps
+docker compose -f stt_dev/docker-compose.yml logs -f
+
