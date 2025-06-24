@@ -11,13 +11,23 @@ The key components are:
 
 ## Running the Servers
 
+Use the helper script `deploy.sh` in the repository root.
 
+```bash
+./deploy.sh dev   # hot reload enabled
+./deploy.sh prod  # production mode
+```
+
+The script downloads the faster-whisper `distil-large-v3` model to
+`stt_dev/stt_server/whisper_model/` if it is missing, warms it up with a
+short transcription and then starts the Docker Compose stack. The model
+folder is mounted into the containers so it persists across runs.
 
 ## Testing
 
 The `tests` directory contains an extensive test-suite that uses `pytest`.
 Install the dependencies from `requirements.txt` and run:
 
-```
+```bash
 pytest
 ```
