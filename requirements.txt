@@ -1,7 +1,0 @@
-fastapi
-python-multipart
-requests
-python-telegram-bot
-python-dotenv
-pytest
-pytest-asyncio
