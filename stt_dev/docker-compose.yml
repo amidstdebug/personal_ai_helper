@@ -3,7 +3,7 @@ services:
   backend_server:
     build:
       context: ..
-      dockerfile: stt_dev/Dockerfile
+      dockerfile: stt_dev/backend_server/Dockerfile
     command: ["/run_server.sh", "stt_dev.backend_server.server", "8000"]
     volumes:
       - ..:/app
@@ -15,7 +15,7 @@ services:
   stt_server:
     build:
       context: ..
-      dockerfile: stt_dev/Dockerfile
+      dockerfile: stt_dev/stt_server/Dockerfile
     command: ["/run_server.sh", "stt_dev.stt_server.server", "8001"]
     volumes:
       - ..:/app
@@ -27,7 +27,7 @@ services:
   telegram_server:
     build:
       context: ..
-      dockerfile: stt_dev/Dockerfile
+      dockerfile: stt_dev/telegram_server/Dockerfile
     command: python -m stt_dev.telegram_server.server
     volumes:
       - ..:/app
