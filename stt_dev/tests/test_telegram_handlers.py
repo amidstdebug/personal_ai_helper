@@ -1,7 +1,7 @@
 import sys, pathlib
 import types as _types
 sys.modules.setdefault("faster_whisper", _types.SimpleNamespace(WhisperModel=object))
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "stt_dev"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import os
 import types
 import pytest
