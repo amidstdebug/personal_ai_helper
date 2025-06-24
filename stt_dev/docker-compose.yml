@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  backend_server:
+    build:
+      context: ..
+      dockerfile: stt_dev/Dockerfile
+    command: uvicorn stt_dev.backend_server.server:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+  stt_server:
+    build:
+      context: ..
+      dockerfile: stt_dev/Dockerfile
+    command: uvicorn stt_dev.stt_server.server:app --host 0.0.0.0 --port 8001
+    ports:
+      - "8001:8001"
+  telegram_server:
+    build:
+      context: ..
+      dockerfile: stt_dev/Dockerfile
+    command: python -m stt_dev.telegram_server.server
