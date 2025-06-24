@@ -1,4 +1,4 @@
-# telegram_server/telegram_utils.py
+# telegram_server/telegram_handlers.py
 
 import os
 import uuid

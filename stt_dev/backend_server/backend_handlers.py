@@ -1,6 +1,7 @@
 # backend/backend_handlers.py
+
 from fastapi import UploadFile, File, HTTPException
-from stt_server.stt_utils import transcribe_audio
+from stt_server.stt_handlers import transcribe_audio
 from utils.config import UPLOAD_DIR
 from utils.logger import get_logger
 from utils.file_utils import save_upload_file, delete_file

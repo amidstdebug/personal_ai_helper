@@ -1,6 +1,6 @@
 # stt_server/server.py
 from fastapi import FastAPI, HTTPException, Query
-from stt_utils import transcribe_audio, process_transcript
+from stt_handlers import transcribe_audio, process_transcript
 import os
 
 from utils.logger import get_logger
