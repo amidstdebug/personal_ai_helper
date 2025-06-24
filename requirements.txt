@@ -4,3 +4,5 @@ openai-whisper
 python-telegram-bot
 pytest
 requests
+uvicorn
+fastapi
