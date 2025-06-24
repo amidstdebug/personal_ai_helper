@@ -2,7 +2,7 @@
 
 from utils.config import BOT_TOKEN
 from telegram.ext import ApplicationBuilder, MessageHandler, filters
-from telegram_server.handler import handle_audio
+from telegram_server.telegram_handlers import handle_audio
 from utils.logger import get_logger
 logger = get_logger("telegram_server")
 
