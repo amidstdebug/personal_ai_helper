@@ -9,6 +9,10 @@ The key components are:
 - **stt_server** – Server to specifically handle all STT-related functionality
 - **utils** – Helper modules for configuration, logging and file management
 
+Each server directory contains its own `Dockerfile` **and** `requirements.txt`.
+The Docker Compose configuration starts one container per server using
+these files.
+
 ## Running the Servers
 
 Use the helper script `deploy.sh` in the repository root.
@@ -26,7 +30,8 @@ folder is mounted into the containers so it persists across runs.
 ## Testing
 
 The `tests` directory contains an extensive test-suite that uses `pytest`.
-Install the dependencies from `requirements.txt` and run:
+Install the development dependencies from the repository root
+`requirements.txt` and run:
 
 ```bash
 pytest
