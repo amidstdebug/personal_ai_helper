@@ -7,7 +7,7 @@ if [ "$MODE" != "dev" ] && [ "$MODE" != "prod" ]; then
 fi
 MODEL_DIR="$(pwd)/stt_dev/stt_server/whisper_model"
 python - <<'PY'
-import importlib, subprocess, sys
+import importlib.util, subprocess, sys
 spec = importlib.util.find_spec("faster_whisper")
 if spec is None:
     subprocess.check_call([sys.executable, "-m", "pip", "install", "faster-whisper"])
