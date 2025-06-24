@@ -1,9 +1,9 @@
 # stt_server/server.py
 from fastapi import FastAPI, HTTPException, Query
-from stt_handlers import transcribe_audio, process_transcript
+from .stt_handlers import transcribe_audio, process_transcript
 import os
 
-from utils.logger import get_logger
+from ..utils.logger import get_logger
 logger = get_logger("stt_server")
 
 app = FastAPI()

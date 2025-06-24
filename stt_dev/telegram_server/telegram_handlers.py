@@ -3,10 +3,10 @@
 import os
 import uuid
 import requests
-from utils.config import FASTAPI_URL, UPLOAD_DIR
+from ..utils.config import FASTAPI_URL, UPLOAD_DIR
 from telegram import Update
 from telegram.ext import ContextTypes
-from utils.logger import get_logger
+from ..utils.logger import get_logger
 logger = get_logger("telegram_server")
 
 os.makedirs(UPLOAD_DIR, exist_ok=True)
