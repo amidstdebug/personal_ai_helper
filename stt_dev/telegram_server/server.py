@@ -1,9 +1,9 @@
 # telegram_server/server.py
 
-from config import BOT_TOKEN
+from utils.config import BOT_TOKEN
 from telegram.ext import ApplicationBuilder, MessageHandler, filters
 from telegram_server.handler import handle_audio
-from logger import get_logger
+from utils.logger import get_logger
 logger = get_logger("telegram_server")
 
 def start_bot():

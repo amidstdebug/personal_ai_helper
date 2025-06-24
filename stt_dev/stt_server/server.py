@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException, Query
 from stt_utils import transcribe_audio, process_transcript
 import os
 
-from logger import get_logger
+from utils.logger import get_logger
 logger = get_logger("stt_server")
 
 app = FastAPI()

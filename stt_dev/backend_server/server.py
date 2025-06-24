@@ -4,8 +4,8 @@ from fastapi import FastAPI, UploadFile, File, HTTPException
 import shutil
 import os
 from stt_server.stt_utils import transcribe_audio
-from config import UPLOAD_DIR
-from logger import get_logger
+from utils.config import UPLOAD_DIR
+from utils.logger import get_logger
 logger = get_logger("backend_server")
 
 app = FastAPI()

@@ -1,4 +1,4 @@
-# logger.py
+# utils/logger.py
 import logging
 
 def get_logger(name: str = "app"):
