@@ -1,6 +1,6 @@
 import sys, pathlib, types as _types
 sys.modules.setdefault("faster_whisper", _types.SimpleNamespace(WhisperModel=object))
-sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1] / "stt_dev"))
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parents[1]))
 import stt_dev.stt_server.stt_handlers as real_handlers
 sys.modules.setdefault("stt_handlers", real_handlers)
 
