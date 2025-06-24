@@ -3,8 +3,8 @@ import os
 import time
 from functools import lru_cache
 from faster_whisper import WhisperModel
-from utils.config import WHISPER_DEVICE, WHISPER_COMPUTE, MODEL_SIZE
-from utils.logger import get_logger
+from ..utils.config import WHISPER_DEVICE, WHISPER_COMPUTE, MODEL_SIZE
+from ..utils.logger import get_logger
 logger = get_logger("stt_server")
 
 @lru_cache(maxsize=1)

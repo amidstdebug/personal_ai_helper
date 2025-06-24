@@ -1,8 +1,8 @@
 # backend_server/server.py
 
 from fastapi import FastAPI, UploadFile, File
-from backend_server.backend_handlers import transcribe
-from utils.logger import get_logger
+from .backend_handlers import transcribe
+from ..utils.logger import get_logger
 
 logger = get_logger("backend_server")
 
