@@ -1,22 +1,17 @@
-# STT Development Package
+# Telegram-Interfacing Module
 
-This package contains a small collection of speech-to-text utilities and example
-FastAPI servers used for testing. The key components are:
+This module contains the different servers for enabling the Telegram bot and its respective STT functionality.
 
-- **stt_server** – exposes endpoints for transcribing existing audio files.
-- **backend_server** – accepts uploaded audio and returns a transcript.
-- **telegram_server** – example integration with a Telegram bot.
-- **utils** – helper modules for configuration, logging and file management.
+The key components are:
+
+- **telegram_server** – Run the Telegram bot.
+- **backend_server** – Backend server to call different services
+- **stt_server** – Server to specifically handle all STT-related functionality
+- **utils** – Helper modules for configuration, logging and file management
 
 ## Running the Servers
 
-Each server can be started with `uvicorn` or run directly when modules provide a
-`main` entry point. They rely on environment variables defined in `.env`.
 
-```
-uvicorn stt_dev.stt_server.server:app --reload
-uvicorn stt_dev.backend_server.server:app --reload
-```
 
 ## Testing
 
